@@ -1,0 +1,44 @@
+{
+  "name": "cursor-db-mcp",
+  "version": "2.0.0",
+  "description": "MCP server to query/export/analyze Cursor workspaceStorage chat history and composer data",
+  "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-org/cursor-db-mcp.git"
+  },
+  "author": "",
+  "bin": {
+    "cursor-db-mcp": "./build/index.js"
+  },
+  "files": [
+    "build",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "inspector": "npx @modelcontextprotocol/inspector build/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "0.6.0",
+    "commander": "^11.1.0",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "@types/sqlite3": "^3.1.11",
+    "typescript": "^5.3.3"
+  },
+  "keywords": [
+    "mcp",
+    "cursor",
+    "workspaceStorage",
+    "sqlite",
+    "chat-history",
+    "export"
+  ]
+}

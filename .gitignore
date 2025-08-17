@@ -1,0 +1,15 @@
+node_modules
+build
+dist
+.DS_Store
+exports
+*.log
+*.sqlite
+*.db
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+node_modules/
+build/
+*.log
+.env*
